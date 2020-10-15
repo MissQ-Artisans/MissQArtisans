@@ -1,20 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <body>
+        <div>
+            <center>
+                <div>
+                    <img class="headPic" src="assets/images/Conference.png" alt="">
+                </div>
+                <div>
+                    <img class="logo" src="assets/images/logo.png">
+                    <h1>Ms.Q Artisans</h1>
+                    <p class="tagline">We Serve at your pleasure</p>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+                </div>
+            </center>
+        </div>
+        <div class="below">
+            <img [routerLink]="['/login']" class="imgLogin" src="assets/images/login.png" alt="">
+        </div>
+    </body>
+
 </ion-content>

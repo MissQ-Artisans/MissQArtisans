@@ -1,27 +1,50 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+body {
+    background-color: #9e9e9e4a;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 79px;
+    border: 4px solid #22bbea8f;
+    margin-top: -60%;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+h1 {
+    font-size: 43px;
+    color: #34d2e6f0;
+    font-weight: bolder!important;
 }
 
-#container a {
-  text-decoration: none;
+p,
+h1 {
+    // font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Arial White", Gadget, sans-serif
+}
+
+.headPic {
+    width: 100%;
+    height: 293px;
+    border-bottom-left-radius: 96%;
+    background-size: cover;
+}
+
+.below {
+    background-color: #827d7d36;
+    height: 100%;
+    border-top-right-radius: 100%;
+    margin-top: 5%;
+    position: fixed;
+}
+
+.tagline {
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.imgLogin {
+    width: 35%;
+    padding-top: 23%;
+    margin-left: 5%;
+    height: auto;
 }
