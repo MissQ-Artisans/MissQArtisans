@@ -1,3 +1,4 @@
+
 <ion-content>
     <div class="container h-100">
         <div class="d-flex justify-content-center h-100">
@@ -37,30 +38,38 @@
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fa fa-calendar"></i></span>
                             </div>
-                            <input type="date" name="birthdate" class="form-control input_user" placeholder="Birthdate" ngModel required>
+                            <input
+                             type="date" name="birthdate" class="form-control input_user" placeholder="Birthdate" ngModel required>
                         </div>
                         <div class="input-group mb-3">
-                            <div class="input-group-append">
+                            <div  class="input-group-append" id="fileInput">
                                 <span class="input-group-text"><i class="fa fa-file-image"></i></span>
-                            </div>
-                            <input type="file" name="selfie" class="form-control input_user" placeholder="Picture (Selfie)" ngModel required>
-                            
+                                <span class="form-control input_user">Picture (Selfie)</span>
+                                <span class="hiddenFileInput">
+                                    <input type="file" name="selfie" ngModel required/>
+                                </span>
+                            </div>                            
                         </div>
                         <div class="input-group mb-3">
-                            <div class="input-group-append">
+                            <div class="input-group-append" id="fileInput">
                                 <span class="input-group-text"><i class="fa fa-file-image"></i></span>
-                            </div>
-                            <input type="file" name="ID" class="form-control input_user" placeholder="Primary ID" ngModel required>
-                        
+                                <span class="form-control input_user">Primary ID</span>
+                                <span class="hiddenFileInput">
+                                    <input type="file" name="ID" ngModel required/>
+                                </span>
+                            </div>                            
                         </div>
                         <div class="input-group mb-3">
-                            <div class="input-group-append">
-                                <span class="input-group-text"><i class="fa fa-file"></i></span>
-                            </div>
-                            <input type="file" name="NBI" class="form-control input_user" placeholder="NBI Clearance" ngModel required>
+                            <div  class="input-group-append" id="fileInput">
+                                <span class="input-group-text"><i class="fa fa-file-image"></i></span>
+                                <span class="form-control input_user">MBI Clearance</span>
+                                <span class="hiddenFileInput">
+                                    <input type="file" name="NBI" ngModel required/>
+                                </span>
+                            </div>                            
                         </div>
-                        <div class="input-group mb-3">
-                            
+
+                        <div class="input-group mb-3">    
                             <h4>Apply for?</h4> <br>
                             <div>
                                 <input  type="radio" value="tutor" name="gender" ngModel checked> Tutor ( College Undergraduate or at least 2 years in College)<br>
