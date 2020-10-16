@@ -24,10 +24,21 @@ const routes: Routes = [
     loadChildren: () => import('./job-orders/job-orders.module').then( m => m.JobOrdersPageModule)
   },
   {
-    path: 'forget-pass',
-    loadChildren: () => import('./forget-pass/forget-pass.module').then( m => m.ForgetPassPageModule)
+    path: 'tracker',
+    loadChildren: () => import('./tracker/tracker.module').then( m => m.TrackerPageModule)
   },
-
+  {
+    path: 'finance',
+    loadChildren: () => import('./finance/finance.module').then( m => m.FinancePageModule)
+  },
+  {
+    path: 'live-chat',
+    loadChildren: () => import('./live-chat/live-chat.module').then( m => m.LiveChatPageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },
 ];
 
 @NgModule({
