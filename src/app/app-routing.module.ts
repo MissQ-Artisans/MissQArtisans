@@ -23,6 +23,11 @@ const routes: Routes = [
     path: 'job-orders',
     loadChildren: () => import('./job-orders/job-orders.module').then( m => m.JobOrdersPageModule)
   },
+  {
+    path: 'forget-pass',
+    loadChildren: () => import('./forget-pass/forget-pass.module').then( m => m.ForgetPassPageModule)
+  },
+
 ];
 
 @NgModule({
