@@ -9,42 +9,48 @@
                     <p>We serve at your pleasure</p>
                 </ion-label>
             </div>
+
             <ion-list lines="none" class="menu-items">
-                <ion-item [routerLink]="['/job-orders']">
-                    <div>
-                        <ion-icon name="cart-outline"></ion-icon>
-                        <ion-label>Job Order</ion-label>
-                    </div>
-                </ion-item>
-                <ion-item [routerLink]="['/tracker']">
-                    <div>
-                        <ion-icon name="analytics-outline"></ion-icon>
-                        <ion-label>Tracker</ion-label>
-                    </div>
-                </ion-item>
-                <ion-item [routerLink]="['/finance']">
-                    <div>
-                        <ion-icon name="wallet-outline"></ion-icon>
-                        <ion-label>Finance</ion-label>
-                    </div>
-                </ion-item>
-                <ion-item [routerLink]="['/live-chat']">
-                    <div>
-                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-                        <ion-label>Live Chat</ion-label>
-                    </div>
-                </ion-item>
-                <ion-item [routerLink]="['/settings']">
-                    <div>
-                        <ion-icon name="settings-outline"></ion-icon>
-                        <ion-label>Settings</ion-label>
-                    </div>
-                </ion-item>
+                <ion-menu-toggle auto-hide="false">
+                    <ion-item [routerLink]="['/job-orders']">
+                        <div>
+                            <ion-icon name="cart-outline"></ion-icon>
+                            <ion-label>Job Order</ion-label>
+                        </div>
+                    </ion-item>
+                    <ion-item [routerLink]="['/tracker']">
+                        <div>
+                            <ion-icon name="analytics-outline"></ion-icon>
+                            <ion-label>Tracker</ion-label>
+                        </div>
+                    </ion-item>
+                    <ion-item [routerLink]="['/finance']">
+                        <div>
+                            <ion-icon name="wallet-outline"></ion-icon>
+                            <ion-label>Finance</ion-label>
+                        </div>
+                    </ion-item>
+                    <ion-item [routerLink]="['/live-chat']">
+                        <div>
+                            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                            <ion-label>Live Chat</ion-label>
+                        </div>
+                    </ion-item>
+                    <ion-item [routerLink]="['/settings']">
+                        <div>
+                            <ion-icon name="settings-outline"></ion-icon>
+                            <ion-label>Settings</ion-label>
+                        </div>
+                    </ion-item>
+                    <ion-item [routerLink]="['/home']">
+                        <div>
+                            <ion-icon name="close-outline"></ion-icon>
+                            <ion-label>Log Out</ion-label>
+                        </div>
+                    </ion-item>
+                </ion-menu-toggle>
             </ion-list>
         </ion-content>
     </ion-menu>
     <ion-router-outlet id="main"></ion-router-outlet>
-
-    <!-- <ion-router-outlet></ion-router-outlet> -->
-
 </ion-app>
