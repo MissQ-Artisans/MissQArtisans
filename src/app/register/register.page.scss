@@ -77,3 +77,7 @@ button{
     border-radius: 20px;
     letter-spacing: 2px;
 }
+
+input[type=radio]:checked {
+    box-shadow:rgba(66, 123, 189, 0.466) 0px 0px 0px 5px;
+}
