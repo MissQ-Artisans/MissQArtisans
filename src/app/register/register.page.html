@@ -1,97 +1,203 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
 <ion-content>
     <div class="container h-100">
         <div class="d-flex justify-content-center h-100">
             <div class="user_card">
                 <div class="d-flex justify-content-center">
                     <div class="brand_logo_container">
-                        <img src="assets/images/signUp.PNG" class="brand_logo" alt="Logo">
+                        <img src="assets/images/signUp.png" class="brand_logo" alt="Logo">
                     </div>
                 </div>
                 <div class="d-flex justify-content-center form_container">
-                    <form>
+                    <form (ngSubmit)="onSubmit()" #sampleForm="ngForm"> 
                         <div class="input-group mb-3">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" name="fname" class="form-control input_user" placeholder="Full name" ngModel required>
+                            <input class="form-control input_user" name="name" [(ngModel)]="Fullname" type="text" required minlength="4"
+                            placeholder="Full name" #name="ngModel" >
+                            <div class="input-group mb-1">
+                                <div class="alert alert-danger" id="err" *ngIf="name.invalid && (name.dirty || name.touched)">
+                                    <div *ngIf="name.errors.required">
+                                        * Please provide your full name.
+                                    </div>
+                                    <div *ngIf="name.errors.minlength" class="err">
+                                        * Name must be at least 4 characters.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                         <div class="input-group mb-3">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fa fa-map-marker"></i></span>
                             </div>
-                            <input type="text" name="address" class="form-control input_user" placeholder="Address" ngModel required>
+                            <input class="form-control input_user" name="address" [(ngModel)]="Address" type="text" required
+                            placeholder="Address" #address="ngModel" >
+                            <div class="input-group mb-1">
+                                <div class="alert alert-danger" id="err" *ngIf="address.invalid && (address.dirty || address.touched)">
+                                <div *ngIf="address.errors.required">
+                                    * Please provide an address.
+                                </div>
+                                </div>
+                            </div>
                         </div>
+
                         <div class="input-group mb-3">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fa fa-phone"></i></span>
                             </div>
-                            <input type="number" name="phone" class="form-control input_user" placeholder="Phone number" ngModel required>
+                            <input class="form-control input_user" name="phone" [(ngModel)]="Phone" type="number" required
+                            placeholder="Phone Number" #phone="ngModel" >
+                            <div class="input-group mb-1">
+                                <div class="alert alert-danger" id="err" *ngIf="phone.invalid && (phone.dirty || phone.touched)">
+                                    <div *ngIf="phone.errors.required">
+                                    * Please provide your phone number.
+                                </div>
+                                </div>
+                            </div>                        
                         </div>
+                        
                         <div class="input-group mb-3">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fa fa-envelope"></i></span>
                             </div>
-                            <input type="email" name="email" class="form-control input_user" placeholder="Email Address" ngModel required>
+                            <input class="form-control input_user" name="email" [(ngModel)]="EmailAdd" type="email" placeholder="Email Address" #emailadd="ngModel"
+                            email pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
+                            <div class="input-group mb-1">
+                                <div class="alert alert-danger" id="err" *ngIf="emailadd.invalid && (emailadd.dirty || emailadd.touched)">
+                                    <div *ngIf="emailadd.errors.required" >
+                                        * Email is required!
+                                    </div>
+                                    <div *ngIf="emailadd.errors.pattern" >
+                                        * Please enter a valid email address!
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                </div>
+                                <input type="password" [(ngModel)]="Password" name="password" placeholder="Password" class="form-control" required #password="ngModel" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+                                <div class="input-group mb-1">
+                                    <div class="alert alert-danger" id="err" *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+                                        <div *ngIf="password.errors.required"> Password is required. </div>
+                                        <div *ngIf="password.errors.pattern"> Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters.</div>
+                                    </div>
+                                </div>
+                        </div>
+                               
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                            </div>
+                            <input type="password" [(ngModel)]="Confirmpassword" name="confirmpassword" placeholder="Confirm Password" class="form-control" required #confirmpassword="ngModel" pattern="{{ password.value }}" />
+                            <div class="input-group mb-1">
+                                <div class="alert alert-danger" id="err" *ngIf=" confirmpassword.invalid && (confirmpassword.dirty|| confirmpassword.touched)" class="alert alert-danger">
+                                    <div *ngIf="confirmpassword.errors.required"> Confirm password is required. </div>
+                                    <div *ngIf="confirmpassword.errors.pattern"> Password & Confirm Password does not match.</div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="input-group mb-3">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fa fa-calendar"></i></span>
                             </div>
-                            <input type="date" name="birthdate" class="form-control input_user" placeholder="Birthdate" ngModel required>
+                            <input class="form-control input_user" name="bdate" [(ngModel)]="Birthdate" type="date" required
+                            placeholder="Birthdate" #bdate="ngModel" >
+                            <div class="input-group mb-1">
+                                <div class="alert alert-danger" id="err" *ngIf="bdate.invalid && (bdate.dirty || bdate.touched)">
+                                    <div *ngIf="bdate.errors.required">
+                                    * Birthdate is required!
+                                    </div>
+                                </div>
+                            </div>                        
                         </div>
+                       
+                        <p>Picture (Selfie):</p>
                         <div class="input-group mb-3">
-                            <div class="input-group-append" id="fileInput">
+                            <div  class="input-group-append" id="fileInput">
                                 <span class="input-group-text"><i class="fa fa-file-image"></i></span>
-                                <span class="form-control input_user">Picture (Selfie)</span>
-                                <span class="hiddenFileInput">
-                                    <input type="file" name="selfie" ngModel required/>
-                                </span>
-                            </div>
+                                <span><input class="form-control input_user" name="selfie" [(ngModel)]="Selfie" type="file" required
+                                    placeholder="Selfie" #selfie="ngModel"/></span>
+                            </div>  
+                            <div class="input-group mb-1">
+                                    <div class="alert alert-danger" id="err" *ngIf="selfie.invalid && (selfie.dirty || selfie.touched)">
+                                        <div *ngIf="selfie.errors.required">
+                                        * Please provide a selfie picture.
+                                        </div>
+                                    </div>
+                                </div>                             
                         </div>
+                       
+                        <p>Primary ID:</p>
                         <div class="input-group mb-3">
-                            <div class="input-group-append" id="fileInput">
-                                <span class="input-group-text"><i class="fa fa-file-image"></i></span>
-                                <span class="form-control input_user">Primary ID</span>
-                                <span class="hiddenFileInput">
-                                    <input type="file" name="ID" ngModel required/>
-                                </span>
+                                <div  class="input-group-append" id="fileInput">
+                                    <span class="input-group-text"><i class="fa fa-file-image"></i></span>
+                                    <span><input class="form-control input_user" name="primary" [(ngModel)]="Primary" type="file" required
+                                        placeholder="Primary" #primary="ngModel"/></span>
+                                </div>  
+                                <div class="input-group mb-1">
+                                        <div class="alert alert-danger" id="err" *ngIf="primary.invalid && (primary.dirty || primary.touched)">
+                                            <div *ngIf="primary.errors.required">
+                                            * Please provide your Primary ID.
+                                            </div>
+                                        </div>
+                                    </div>                             
                             </div>
-                        </div>
+                       
+                        <p>NBI Clearance:</p>
                         <div class="input-group mb-3">
-                            <div class="input-group-append" id="fileInput">
-                                <span class="input-group-text"><i class="fa fa-file-image"></i></span>
-                                <span class="form-control input_user">NBI Clearance</span>
-                                <span class="hiddenFileInput">
-                                    <input type="file" name="NBI" ngModel required/>
-                                </span>
+                                <div  class="input-group-append" id="fileInput">
+                                    <span class="input-group-text"><i class="fa fa-file-image"></i></span>
+                                    <span><input class="form-control input_user" name="nbi" [(ngModel)]="Primary" type="file" required
+                                        placeholder="NBI" #nbi="ngModel"/></span>
+                                </div>  
+                                <div class="input-group mb-1">
+                                        <div class="alert alert-danger" id="err" *ngIf="nbi.invalid && (nbi.dirty || nbi.touched)">
+                                            <div *ngIf="nbi.errors.required">
+                                            * Please provide your NBI Clearance.
+                                            </div>
+                                        </div>
+                                    </div>                             
                             </div>
-                        </div>
 
-                        <div class="input-group mb-3">
-                            <h4>Apply for?</h4> <br>
-                            <div>
-                                <input type="radio" value="tutor" name="gender" ngModel checked> Tutor ( College Undergraduate or at least 2 years in College)<br>
-                                <input type="radio" value="nanny" name="gender" ngModel> Nanny ( NC2 or n/a ) <br>
-                                <input type="radio" value="housekeeping" name="gender" ngModel> Housekeeping ( NC2 or n/a ) <br>
-                                <input type="radio" value="haircut" name="gender" ngModel> Haircut ( NC2 or n/a ) <br>
-                            </div>
-                        </div>
+                        <div class="input-group mb-3"> 
+                                <ion-item class="apply">
+                                    <ion-list-header>
+                                        <ion-label position="stacked">Apply for?</ion-label>
+                                    </ion-list-header>
+                                    <ion-select  interface="action-sheet">
+                                          <ion-select-option value="tutor"> Tutor (College Undergraduate/at least 2 years in College)</ion-select-option>
+                                          <ion-select-option value="nanny">Nanny (NC2 or n/a)</ion-select-option>
+                                          <ion-select-option value="housekeeping">Housekeeping (NC2 or n/a)</ion-select-option>
+                                          <ion-select-option value="haircut">Haircut (NC2 or n/a)</ion-select-option>
+                                        </ion-select>
+                                </ion-item>
+                        </div>  
+
                         <div class="d-flex justify-content-center mt-3 ">
-                            <button type="button" class="btn btn-outline-primary">Sign Up</button>
+                            <button class="btn btn-outline-primary" [disabled]="!sampleForm.form.valid" [routerLink]="['/job-orders']">Sign Up</button>
+                            <!-- [disabled]="!sampleForm.form.valid" -->
                         </div>
-
+                                     
                     </form>
                 </div>
-
-                <div class="mt-4">
-                    <div class="d-flex justify-content-center links">
-                        Already have an account? <a [routerLink]="['/login']" class="ml-2">Sign In</a>
+                <ion-footer>
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-center links">
+                            Already have an account? <a [routerLink]="['/login']" class="ml-2">Sign In</a>
+                        </div>
                     </div>
-                </div>
+                </ion-footer>
+               
             </div>
         </div>
     </div>
-
+    
 
 
 </ion-content>
