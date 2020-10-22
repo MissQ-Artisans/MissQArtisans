@@ -32,3 +32,16 @@ h1 {
     color: black;
     text-align: center;
 }
+
+hr {
+    color: red;
+}
+
+.list {
+    background-color: rgb(21, 160, 224);
+    padding: 10px;
+    ion-label {
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+    }
+}

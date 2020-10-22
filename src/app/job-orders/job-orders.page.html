@@ -31,22 +31,19 @@
     </ion-list>
 
     <h1>Job orders from customer</h1>
-    <!-- <div> -->
-    <ion-grid>
-        <ion-row>
-            <ion-col>
-                <div>
-                    1 of 3
-                </div>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-    <!-- <ion-buttons slot="end">
-            <ion-button (click)="orders()">
-                {{title}}
-            </ion-button>
-        </ion-buttons> -->
-    <!-- </div> -->
+
+
+
+    <ion-list class="list">
+        <ion-item>
+            <ion-label (click)="order()">Tutor</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label (click)="order()">Nany</ion-label>
+        </ion-item>
+
+    </ion-list>
+
 
 
     <!-- <p *ngIf="dataFromModal">Data from Modal : {{ dataFromModal.data.ionic }}</p> -->

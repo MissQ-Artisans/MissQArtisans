@@ -1,0 +1,23 @@
+@import "../../global.scss";
+ion-button {
+    width: 100%
+}
+
+#pass:hover {
+    background-color: $danger;
+}
+
+#accept:hover {
+    background-color: $info;
+}
+
+.orders {
+    ion-label {
+        color: $primary;
+    }
+}
+
+ion-label {
+    font-weight: bolder;
+    font-size: 18px;
+}
