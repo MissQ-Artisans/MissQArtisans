@@ -1,9 +1,21 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>newOrder</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+    <ion-toolbar color="secondary">
+        <ion-buttons slot="end">
+            <button ion-button icon-only color='black' (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-list>
+        <ion-list-header>
+            <ion-label>Name Of Customer : {{ name }}</ion-label>
+        </ion-list-header>
+        <ion-item>Job Order Title:{{title}}</ion-item>
+        <ion-item>Schedule:{{sched}}</ion-item>
+        <ion-item>Service Location:{{location}}</ion-item>
+        <ion-item>Rate:{{rate}}</ion-item>
+    </ion-list>
+    <ion-button>Accept Job</ion-button>
+    <ion-button>Pass</ion-button>
 
 </ion-content>
