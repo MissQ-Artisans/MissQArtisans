@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Platform } from '@ionic/angular'; 
 
 @Component({
   selector: 'app-tracker',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tracker.page.scss'],
 })
 export class TrackerPage implements OnInit {
-
-  constructor() { }
+  orders: string = "ongoing";
+  isAndroid: boolean = false;
+ 
+  constructor(platform: Platform) {
+    this.isAndroid = platform.is('android');
+  }
 
   ngOnInit() {
   }

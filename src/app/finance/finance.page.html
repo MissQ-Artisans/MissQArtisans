@@ -1,17 +1,46 @@
 <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="secondary">
         <ion-title>Finance</ion-title>
         <ion-buttons slot="start">
             <ion-menu-button menu="main-menu"></ion-menu-button>
 
         </ion-buttons>
-
-
     </ion-toolbar>
-
-
 </ion-header>
 
 <ion-content>
+    <ion-list lines="none" class="menu-items">
+        <ion-item>
+            <div>
+                <ion-icon name="md-card"></ion-icon>
+                <ion-label>Current Balance</ion-label>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div>
+                <ion-icon name="md-cash"></ion-icon>
+                <ion-label>Cash Out</ion-label>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div>
+                <ion-icon name="md-pricetags"></ion-icon>
+                <ion-label>Cash In</ion-label>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div>
+                <ion-icon name="md-paper"></ion-icon>
+                <ion-label>History</ion-label>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div>
+                <ion-icon name="md-analytics"></ion-icon>
+                <ion-label>Statistics</ion-label>
+            </div>
+        </ion-item>
+    
+    </ion-list>
 
 </ion-content>

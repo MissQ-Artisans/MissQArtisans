@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="secondary">
         <ion-title>Settings</ion-title>
         <ion-buttons slot="start">
             <ion-menu-button menu="main-menu"></ion-menu-button>
@@ -56,29 +56,44 @@
                 <ion-label>Frequently Ask Question</ion-label>
             </div>
         </ion-item>
-        <ion-item>
-            <div>
-                <ion-icon name="hammer"></ion-icon>
-                <label class="item item-input item-select item-light">
-                    <div class = "input-label">
-                       Select
-                    </div>
-                      
-                    <!-- <select>
-                       <option>Option 1</option>
-                       <option selected>Option 2</option>
-                       <option>Option 3</option>
-                    </select> -->
-                 </label>
-                <!-- <ion-label>All Settings</ion-label>
-                <ion-select class="select">
-                    <ion-select-option>Notification Settings</ion-select-option>
-                    <ion-select-option>Notification Settings</ion-select-option>
-                    <ion-select-option>Notification Settings</ion-select-option>
-
-                </ion-select> -->
-            </div>
+        <!-- 
+https://edupala.com/ionic-menu-with-example/
+         -->
+        <ion-item lines="none" (click)="isSetting === 1 ? isSetting = 0 : isSetting = 1">
+            <ion-icon name="md-construct" slot="start"></ion-icon>
+            <ion-label>All Settings</ion-label>
+            <ion-icon slot="start" [name]="isSetting? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
         </ion-item>
+
+        <ion-menu-toggle auto-hide="false" class="subMenu">
+            <ion-list lines="none">
+                <ion-item menuclose [hidden]="!isSetting" [routerLink]="['/new-order']">
+                    <ion-icon name="notifications" slot="start"></ion-icon>
+                    <ion-label>Notification Settings</ion-label>
+                </ion-item>
+                <ion-item menuclose [hidden]="!isSetting" [routerLink]="['/tracker']" [queryParams]="{ type: 'birthday' }" menuClose class="sub-menu">
+                    <ion-icon name="md-basket" slot="start"></ion-icon>
+                    <ion-label> New order notifications</ion-label>
+                </ion-item>
+                <ion-item menuclose [hidden]="!isSetting" [routerLink]="['/']" [queryParams]="{ type: 'birthday' }" menuClose class="sub-menu">
+                    <ion-icon name="globe" slot="start"></ion-icon>
+                    <ion-label>Language</ion-label>
+                </ion-item>
+                <ion-item menuclose [hidden]="!isSetting" [routerLink]="['/']" [queryParams]="{ type: 'birthday' }" menuClose class="sub-menu">
+                    <ion-icon name="md-globe" slot="start"></ion-icon>
+                    <ion-label>Region / State</ion-label>
+                </ion-item>
+                <ion-item menuclose [hidden]="!isSetting" [routerLink]="['/']" [queryParams]="{ type: 'birthday' }" menuClose class="sub-menu">
+                    <ion-icon name="md-share-alt" slot="start"></ion-icon>
+                    <ion-label>Share</ion-label>
+                </ion-item>
+
+            </ion-list>
+
+        </ion-menu-toggle>
+
+
+
     </ion-list>
 
 </ion-content>

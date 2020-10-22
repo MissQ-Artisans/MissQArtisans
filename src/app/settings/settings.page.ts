@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-settings',
@@ -8,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class SettingsPage implements OnInit {
 
   constructor() { }
-
   ngOnInit() {
   }
+  // toroute(){
+  //   this.route.navigate(['/finance'])
+  // }
 
 }

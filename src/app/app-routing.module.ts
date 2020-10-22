@@ -42,7 +42,11 @@ const routes: Routes = [
   {
     path: 'forget-pass',
     loadChildren: () => import('./forget-pass/forget-pass.module').then( m => m.ForgetPassPageModule)
+  },  {
+    path: 'new-order',
+    loadChildren: () => import('./new-order/new-order.module').then( m => m.NewOrderPageModule)
   },
+
 ];
 
 @NgModule({

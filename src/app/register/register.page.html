@@ -18,7 +18,7 @@
                             <input class="form-control input_user" name="name" [(ngModel)]="Fullname" type="text" required minlength="4"
                             placeholder="Full name" #name="ngModel" >
                             <div class="input-group mb-1">
-                                <div class="alert alert-danger" id="err" *ngIf="name.invalid && (name.dirty || name.touched)">
+                                <div class="text-danger" id="err" *ngIf="name.invalid && (name.dirty || name.touched)">
                                     <div *ngIf="name.errors.required">
                                         * Please provide your full name.
                                     </div>
@@ -36,7 +36,7 @@
                             <input class="form-control input_user" name="address" [(ngModel)]="Address" type="text" required
                             placeholder="Address" #address="ngModel" >
                             <div class="input-group mb-1">
-                                <div class="alert alert-danger" id="err" *ngIf="address.invalid && (address.dirty || address.touched)">
+                                <div class="text-danger" id="err" *ngIf="address.invalid && (address.dirty || address.touched)">
                                 <div *ngIf="address.errors.required">
                                     * Please provide an address.
                                 </div>
@@ -48,13 +48,17 @@
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fa fa-phone"></i></span>
                             </div>
-                            <input class="form-control input_user" name="phone" [(ngModel)]="Phone" type="number" required
+                            <input class="form-control input_user" name="phone" [(ngModel)]="Phone" type="number" required minlength="11"
                             placeholder="Phone Number" #phone="ngModel" >
                             <div class="input-group mb-1">
-                                <div class="alert alert-danger" id="err" *ngIf="phone.invalid && (phone.dirty || phone.touched)">
+                                <div class="text-danger" id="err" *ngIf="phone.invalid && (phone.dirty || phone.touched)">
                                     <div *ngIf="phone.errors.required">
-                                    * Please provide your phone number.
-                                </div>
+                                        * Please provide your phone number.
+                                    </div>
+                                    <div *ngIf="phone.errors.minlength" class="err">
+                                        * Invalid phone number.
+                                    </div>
+
                                 </div>
                             </div>                        
                         </div>
@@ -66,7 +70,7 @@
                             <input class="form-control input_user" name="email" [(ngModel)]="EmailAdd" type="email" placeholder="Email Address" #emailadd="ngModel"
                             email pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
                             <div class="input-group mb-1">
-                                <div class="alert alert-danger" id="err" *ngIf="emailadd.invalid && (emailadd.dirty || emailadd.touched)">
+                                <div class="text-danger" id="err" *ngIf="emailadd.invalid && (emailadd.dirty || emailadd.touched)">
                                     <div *ngIf="emailadd.errors.required" >
                                         * Email is required!
                                     </div>
@@ -82,7 +86,7 @@
                                 </div>
                                 <input type="password" [(ngModel)]="Password" name="password" placeholder="Password" class="form-control" required #password="ngModel" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
                                 <div class="input-group mb-1">
-                                    <div class="alert alert-danger" id="err" *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+                                    <div class="text-danger" id="err" *ngIf="password.invalid && (password.dirty || password.touched)" >
                                         <div *ngIf="password.errors.required"> Password is required. </div>
                                         <div *ngIf="password.errors.pattern"> Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters.</div>
                                     </div>
@@ -95,7 +99,7 @@
                             </div>
                             <input type="password" [(ngModel)]="Confirmpassword" name="confirmpassword" placeholder="Confirm Password" class="form-control" required #confirmpassword="ngModel" pattern="{{ password.value }}" />
                             <div class="input-group mb-1">
-                                <div class="alert alert-danger" id="err" *ngIf=" confirmpassword.invalid && (confirmpassword.dirty|| confirmpassword.touched)" class="alert alert-danger">
+                                <div class="text-danger" id="err" *ngIf=" confirmpassword.invalid && (confirmpassword.dirty|| confirmpassword.touched)" >
                                     <div *ngIf="confirmpassword.errors.required"> Confirm password is required. </div>
                                     <div *ngIf="confirmpassword.errors.pattern"> Password & Confirm Password does not match.</div>
                                 </div>
@@ -109,7 +113,7 @@
                             <input class="form-control input_user" name="bdate" [(ngModel)]="Birthdate" type="date" required
                             placeholder="Birthdate" #bdate="ngModel" >
                             <div class="input-group mb-1">
-                                <div class="alert alert-danger" id="err" *ngIf="bdate.invalid && (bdate.dirty || bdate.touched)">
+                                <div class="text-danger" id="err" *ngIf="bdate.invalid && (bdate.dirty || bdate.touched)">
                                     <div *ngIf="bdate.errors.required">
                                     * Birthdate is required!
                                     </div>
@@ -125,7 +129,7 @@
                                     placeholder="Selfie" #selfie="ngModel"/></span>
                             </div>  
                             <div class="input-group mb-1">
-                                    <div class="alert alert-danger" id="err" *ngIf="selfie.invalid && (selfie.dirty || selfie.touched)">
+                                    <div class="text-danger" id="err" *ngIf="selfie.invalid && (selfie.dirty || selfie.touched)">
                                         <div *ngIf="selfie.errors.required">
                                         * Please provide a selfie picture.
                                         </div>
@@ -141,7 +145,7 @@
                                         placeholder="Primary" #primary="ngModel"/></span>
                                 </div>  
                                 <div class="input-group mb-1">
-                                        <div class="alert alert-danger" id="err" *ngIf="primary.invalid && (primary.dirty || primary.touched)">
+                                        <div class="text-danger" id="err" *ngIf="primary.invalid && (primary.dirty || primary.touched)">
                                             <div *ngIf="primary.errors.required">
                                             * Please provide your Primary ID.
                                             </div>
@@ -153,11 +157,11 @@
                         <div class="input-group mb-3">
                                 <div  class="input-group-append" id="fileInput">
                                     <span class="input-group-text"><i class="fa fa-file-image"></i></span>
-                                    <span><input class="form-control input_user" name="nbi" [(ngModel)]="Primary" type="file" required
+                                    <span><input class="form-control input_user" name="nbi" [(ngModel)]="NBI" type="file" required
                                         placeholder="NBI" #nbi="ngModel"/></span>
                                 </div>  
                                 <div class="input-group mb-1">
-                                        <div class="alert alert-danger" id="err" *ngIf="nbi.invalid && (nbi.dirty || nbi.touched)">
+                                        <div class="text-danger" id="err" *ngIf="nbi.invalid && (nbi.dirty || nbi.touched)">
                                             <div *ngIf="nbi.errors.required">
                                             * Please provide your NBI Clearance.
                                             </div>
@@ -167,9 +171,7 @@
 
                         <div class="input-group mb-3"> 
                                 <ion-item class="apply">
-                                    <ion-list-header>
-                                        <ion-label position="stacked">Apply for?</ion-label>
-                                    </ion-list-header>
+                                    <ion-label>Apply for?</ion-label>
                                     <ion-select  interface="action-sheet">
                                           <ion-select-option value="tutor"> Tutor (College Undergraduate/at least 2 years in College)</ion-select-option>
                                           <ion-select-option value="nanny">Nanny (NC2 or n/a)</ion-select-option>
@@ -181,7 +183,6 @@
 
                         <div class="d-flex justify-content-center mt-3 ">
                             <button class="btn btn-outline-primary" [disabled]="!sampleForm.form.valid" [routerLink]="['/job-orders']">Sign Up</button>
-                            <!-- [disabled]="!sampleForm.form.valid" -->
                         </div>
                                      
                     </form>

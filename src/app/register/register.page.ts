@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../user-service.service';
 import { newRegister } from '../../data/app-data';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-register',
@@ -18,7 +20,7 @@ export class RegisterPage implements OnInit {
       Birthdate:Date;
       Selfie: string;
       Picture: string;
-      NBI: String;
+      NBI: string;
     
       registerdata: newRegister;
       
@@ -38,6 +40,14 @@ constructor(private http: UserServiceService) {
   }
 
   onSubmit() {
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Your work has been saved',
+      showConfirmButton: false,
+      timer: 1500
+    });
+
     this.registerdata ={
       id: this.tempID,
       Fullname:this.Fullname,
@@ -55,6 +65,8 @@ constructor(private http: UserServiceService) {
   this.registerdataArray.push(this.registerdata)
    console.log("data:",this.registerdataArray);
 
+  
+
    this.Fullname= "";
    this.Address="";
    this.Phone = null;
@@ -65,5 +77,7 @@ constructor(private http: UserServiceService) {
    this.Selfie =  "";
    this.Picture = "";
    this.NBI = "";
+
+  
   }
 }

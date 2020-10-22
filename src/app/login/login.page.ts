@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../user-service.service';
 import { newLogin } from '../../data/app-data';
-
+import { Swal } from 'sweetalert2'
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -16,8 +16,6 @@ export class LoginPage implements OnInit {
 
 constructor(private http: UserServiceService) {
   this.logindata = new newLogin();
-  console.log("fdsgfsdg");
-    
 
    }
 
@@ -25,10 +23,9 @@ constructor(private http: UserServiceService) {
     
   }
 
-  
   onSubmit() {
     console.log(this.Username);
-    
+   
     this.logindata ={
       username:this.Username,
       password:this.Password
