@@ -1,9 +1,99 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-title>register</ion-title>
-    </ion-toolbar>
-</ion-header>
-
 <ion-content>
-    <ion-button [routerLink]="['/job-orders']">to dashboard</ion-button>
+    <div class="container h-100">
+        <div class="d-flex justify-content-center h-100">
+            <div class="user_card">
+                <div class="d-flex justify-content-center">
+                    <div class="brand_logo_container">
+                        <img src="assets/images/signUp.png" class="brand_logo" alt="Logo">
+                        
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center form_container">
+                    <form>
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" name="fname" class="form-control input_user" placeholder="Full name" ngModel required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa fa-map-marker"></i></span>
+                            </div>
+                            <input type="text" name="address" class="form-control input_user" placeholder="Address" ngModel required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                            </div>
+                            <input type="number" name="phone" class="form-control input_user" placeholder="Phone number" ngModel required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                            </div>
+                            <input type="email" name="email" class="form-control input_user" placeholder="Email Address" ngModel required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                            </div>
+                            <input
+                             type="date" name="birthdate" class="form-control input_user" placeholder="Birthdate" ngModel required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div  class="input-group-append" id="fileInput">
+                                <span class="input-group-text"><i class="fa fa-file-image"></i></span>
+                                <span class="form-control input_user">Picture (Selfie)</span>
+                                <span class="hiddenFileInput">
+                                    <input type="file" name="selfie" ngModel required/>
+                                </span>
+                            </div>                            
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-append" id="fileInput">
+                                <span class="input-group-text"><i class="fa fa-file-image"></i></span>
+                                <span class="form-control input_user">Primary ID</span>
+                                <span class="hiddenFileInput">
+                                    <input type="file" name="ID" ngModel required/>
+                                </span>
+                            </div>                            
+                        </div>
+                        <div class="input-group mb-3">
+                            <div  class="input-group-append" id="fileInput">
+                                <span class="input-group-text"><i class="fa fa-file-image"></i></span>
+                                <span class="form-control input_user">MBI Clearance</span>
+                                <span class="hiddenFileInput">
+                                    <input type="file" name="NBI" ngModel required/>
+                                </span>
+                            </div>                            
+                        </div>
+
+                        <div class="input-group mb-3">    
+                            <h4>Apply for?</h4> <br>
+                            <div>
+                                <input  type="radio" value="tutor" name="gender" ngModel checked> Tutor ( College Undergraduate or at least 2 years in College)<br>
+                                <input  type="radio" value="nanny" name="gender" ngModel> Nanny ( NC2 or n/a ) <br>
+                                <input  type="radio" value="housekeeping" name="gender" ngModel> Housekeeping ( NC2 or n/a ) <br>
+                                <input  type="radio" value="haircut" name="gender" ngModel> Haircut ( NC2 or n/a ) <br>
+                            </div>
+                        </div>  
+                        <div class="d-flex justify-content-center mt-3 ">
+                            <button type="button" class="btn btn-outline-primary">Sign Up</button>
+                        </div>
+                                     
+                    </form>
+                </div>
+
+                <div class="mt-4">
+                    <div class="d-flex justify-content-center links">
+                        Already have an account? <a [routerLink]="['/login']" class="ml-2">Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+
 </ion-content>
