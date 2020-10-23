@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../user-service.service';
 import { newLogin } from '../../data/app-data';
-import { Swal } from 'sweetalert2'
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',

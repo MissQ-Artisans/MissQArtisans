@@ -10,6 +10,7 @@ export class newRegister{
     Selfie: string;
     Picture: string;
     NBI: string;
+    JobTitle: string;
 }
 
 export class newLogin{
