@@ -1,63 +1,58 @@
 @import "../../global.scss";
-
 ion-content {
     --background: linear-gradient(to top right, #0000ff -85%, #00ffff 100%);
-    
 }
 
-
-ion-footer{
+ion-footer {
     position: relative;
     top: 40%;
 }
-    
-    .user_card {
-        height:auto;
-        width: auto;
-        margin-top: 35%;
-        margin-bottom: auto;
-        background: white;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 10px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 15px 50px 0px 116px;
-        opacity: 0.5;
-    }
-    
-    .user_card:hover {
-        opacity: 5.0;
-    }
 
-   
-    .brand_logo_container {
-        position: $absolute;
-        height: 170px;
-        width: 170px;
-        top: -75px;
-        border-radius: 50%;
-        background: rgb(21, 160, 224);
-        padding: 10px;
-        text-align: $center;
-        box-shadow: 0px 1px 10px rgb(91, 110, 119);
+.user_card {
+    height: auto;
+    width: auto;
+    margin-top: 35%;
+    margin-bottom: auto;
+    background: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px 50px 0px 116px;
+    opacity: 0.5;
+}
 
-    }
-    
-    .brand_logo {
-        height: 150px;
-        width: 150px;
-        border-radius: 50%;
-        border: 2px $solid $light;
-    }
-    
-    .form_container {
-        margin-top: 100px;
-    }
- 
+.user_card:hover {
+    opacity: 5.0;
+}
+
+.brand_logo_container {
+    position: $absolute;
+    height: 170px;
+    width: 170px;
+    top: -75px;
+    border-radius: 50%;
+    background: rgb(21, 160, 224);
+    padding: 10px;
+    text-align: $center;
+    box-shadow: 0px 1px 10px rgb(91, 110, 119);
+}
+
+.brand_logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px $solid $light;
+}
+
+.form_container {
+    margin-top: 100px;
+}
+
 .input-group-text {
     background: rgb(59, 133, 230);
     color: $light !important;
@@ -77,7 +72,7 @@ ion-footer{
     border-radius: 20px;
 }
 
-button{
+button {
     background: linear-gradient(to right, #0000ff -8%, #00ffff 100%);
     font-size: 15px;
     padding: 10px;
@@ -90,25 +85,25 @@ button{
 }
 
 input[type=radio]:checked {
-    box-shadow:rgba(95, 118, 145, 0.466) 0px 0px 0px 5px;
+    box-shadow: rgba(95, 118, 145, 0.466) 0px 0px 0px 5px;
 }
 
-
-#err{
+#err {
     width: 100% !important;
     margin-top: 5%;
     margin-bottom: -2%;
-    text-align: center !important; 
+    text-align: center !important;
     padding: -5px;
 }
 
-.apply{
+.apply {
     width: auto;
 }
-ion-select{
+
+ion-select {
     width: 200px;
 }
 
-.apply-label{
+.apply-label {
     font-size: 30px !important;
 }

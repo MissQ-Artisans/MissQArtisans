@@ -15,8 +15,10 @@ import {HttpClientModule} from '@angular/common/http'
 
 
 
+
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ],
   entryComponents: [],
   imports: [BrowserModule, FormsModule, HttpClientModule ,IonicModule.forRoot(), AppRoutingModule],
   providers: [
@@ -27,4 +29,4 @@ import {HttpClientModule} from '@angular/common/http'
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

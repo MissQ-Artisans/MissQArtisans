@@ -1,17 +1,11 @@
-<ion-header>
-    <ion-toolbar color="secondary">
+<ion-header [translucent]="true">
+    <ion-toolbar color="primary">
         <ion-title>Job Orders</ion-title>
         <ion-buttons slot="start">
             <ion-menu-button menu="main-menu"></ion-menu-button>
-
         </ion-buttons>
-
-
     </ion-toolbar>
-
-
 </ion-header>
-
 <ion-content>
     <ion-list lines="none">
         <div class="work">
@@ -26,9 +20,17 @@
                 <ion-toggle slot="start" name="apple" color="secondary"></ion-toggle>
             </ion-item>
         </div>
-        <!-- <ion-button expand="block">Show Modal</ion-button> -->
+    </ion-list>
+    <h1>Job orders from customer</h1>
+    <ion-list class="list">
+        <ion-item>
+            <ion-label (click)="order()">Job-Title</ion-label>
+        </ion-item>
     </ion-list>
 
+
+
+    <!-- <p *ngIf="dataFromModal">Data from Modal : {{ dataFromModal.data.ionic }}</p> -->
 
 
 </ion-content>

@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { JobOrdersPageRoutingModule } from './job-orders-routing.module';
 
 import { JobOrdersPage } from './job-orders.page';
+import {OrdersPage} from '../orders/orders.page';
+
 
 @NgModule({
   imports: [
@@ -15,6 +17,6 @@ import { JobOrdersPage } from './job-orders.page';
     IonicModule,
     JobOrdersPageRoutingModule
   ],
-  declarations: [JobOrdersPage]
+  declarations: [JobOrdersPage,OrdersPage]
 })
 export class JobOrdersPageModule {}

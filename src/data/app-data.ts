@@ -17,3 +17,11 @@ export class newLogin{
     username: string;
     password: string;
 }
+export class jobOrders{
+    name: string;
+    title:string;
+    sched:Date;
+    location:string;
+    rate:Number;
+
+}
