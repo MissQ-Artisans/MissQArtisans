@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar color="primary">
+    <ion-toolbar color="secondary">
         <ion-title>Tracker</ion-title>
         <ion-buttons slot="start">
             <ion-menu-button menu="main-menu"></ion-menu-button>
@@ -23,49 +23,27 @@
 
     <div [ngSwitch]="orders">
         <ion-list *ngSwitchCase="'ongoing'">
-            <ion-item>
-                <ion-thumbnail item-start>
-                    <!-- <img src="assets/img/thumbnail-puppy-1.jpg"> -->
-                </ion-thumbnail>
-                <h2>Ruby</h2>
-            </ion-item>
-            <ion-item>
-                <ion-thumbnail item-start>
-                    <!-- <img src="assets/img/thumbnail-puppy-2.jpg"> -->
-                </ion-thumbnail>
-                <h2>Oscar</h2>
-            </ion-item>
+            <ion-list class="list">
+                <ion-item>
+                    <ion-label (click)="order()">{{Job-Title}}</ion-label>
+                </ion-item>
+            </ion-list>
         </ion-list>
 
         <ion-list *ngSwitchCase="'completed'">
-            <ion-item>
-                <ion-thumbnail item-start>
-                    <!-- <img src="assets/img/thumbnail-kitten-1.jpg"> -->
-                </ion-thumbnail>
-                <h2>Luna</h2>
-            </ion-item>
-            <ion-item>
-                <ion-thumbnail item-start>
-                    <!-- <img src="assets/img/thumbnail-kitten-3.jpg"> -->
-                </ion-thumbnail>
-                <h2>Milo</h2>
-            </ion-item>
+            <ion-list class="list">
+                <ion-item>
+                    <ion-label (click)="order()">{{Job-Title}}</ion-label>
+                </ion-item>
+            </ion-list>
         </ion-list>
 
         <ion-list *ngSwitchCase="'rejected'">
-            <ion-item>
-                <ion-thumbnail item-start>
-                    <!-- <img src="assets/img/thumbnail-duckling-1.jpg"> -->
-                </ion-thumbnail>
-                <h2>Daffy</h2>
-            </ion-item>
-            <ion-item>
-                <ion-thumbnail item-start>
-                    <!-- <img src="assets/img/thumbnail-duckling-2.jpg"> -->
-                </ion-thumbnail>
-                <h2>Huey</h2>
-            </ion-item>
-
+            <ion-list class="list">
+                <ion-item>
+                    <ion-label (click)="order()">{{Job-Title}}</ion-label>
+                </ion-item>
+            </ion-list>
         </ion-list>
     </div>
 

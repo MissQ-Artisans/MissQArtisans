@@ -6,8 +6,7 @@ ion-content {
 .user_card {
     height: 452px;
     width: 350px;
-    margin-top: 35%;
-    margin-bottom: $auto;
+    margin: auto; 
     background-color: white;
     position: $relative;
     display: $flex;
@@ -47,7 +46,7 @@ ion-content {
 }
 
 .form_container {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .input-group-text {
@@ -88,10 +87,127 @@ ion-content {
     letter-spacing: 2px;
     text-shadow: 2px 2px black;
 }
-#err {
+
+#err{
     width: 100% !important;
     margin-top: 5%;
     margin-bottom: -2%;
-    text-align: center !important;
+    text-align: center !important; 
     padding: -5px;
+}
+
+/* ----------- Moto G4 ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .user_card {
+        margin: auto;
+        top: 1%;
+    }
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 360px) 
+and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .user_card {
+        margin: auto;
+        top: 27%;
+        margin-bottom: 5%;
+    }
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .user_card {
+        margin: auto;
+        top: 5%;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .user_card {
+        margin: auto;
+        top: 27%;
+        margin-bottom: 5%;
+    }
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+    .user_card {
+        margin: auto;
+        top: 27%;
+        margin-bottom: 5%;
+    }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .user_card {
+        margin: auto;
+        top: 27%;
+        margin-bottom: 5%;
+    }
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .user_card {
+        margin: auto;
+        top: 27%;
+        margin-bottom: 5%;
+    }
+}
+
+
+/* ----------- Galaxy Fold ----------- */
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 280px) 
+  and (max-device-width: 653px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .user_card {
+        margin: auto;
+        top: 33%;
+        margin-bottom: 5%;
+    }
 }

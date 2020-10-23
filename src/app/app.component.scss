@@ -54,10 +54,12 @@
         font-size: 30px;
     }
     ion-item {
+        font-family: lato !important;
         padding-left: 0px;
         margin-bottom: 10px;
         font-size: 20px;
         font-weight: bold;
+        
         // background-color: $info;
     }
     ion-label {

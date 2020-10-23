@@ -1,7 +1,13 @@
+@import "../../global.scss";
+* {
+    font-family: lato;
+}
+
 ion-title {
     color: white;
     letter-spacing: 1.5px;
 }
+
 
 .menu-items {
     margin: 0px;

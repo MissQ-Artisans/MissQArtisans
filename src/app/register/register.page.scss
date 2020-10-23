@@ -3,16 +3,13 @@ ion-content {
     --background: linear-gradient(to top right, #0000ff -85%, #00ffff 100%);
 }
 
-ion-footer {
-    position: relative;
-    top: 40%;
-}
-
+    
 .user_card {
-    height: auto;
-    width: auto;
-    margin-top: 35%;
-    margin-bottom: auto;
+    margin: auto;
+    height:160%;
+    width: 350px;
+    margin-top: 10%;
+    margin-bottom: 5%;
     background: white;
     position: relative;
     display: flex;
@@ -30,6 +27,7 @@ ion-footer {
     opacity: 5.0;
 }
 
+
 .brand_logo_container {
     position: $absolute;
     height: 170px;
@@ -40,6 +38,7 @@ ion-footer {
     padding: 10px;
     text-align: $center;
     box-shadow: 0px 1px 10px rgb(91, 110, 119);
+
 }
 
 .brand_logo {
@@ -52,7 +51,7 @@ ion-footer {
 .form_container {
     margin-top: 100px;
 }
-
+ 
 .input-group-text {
     background: rgb(59, 133, 230);
     color: $light !important;
@@ -72,7 +71,19 @@ ion-footer {
     border-radius: 20px;
 }
 
-button {
+.regbtn {
+    background: linear-gradient(to right, #0000ff -8%, #00ffff 100%);
+    font-size: 15px;
+    padding: 10px;
+    width: 76%;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px black;
+}
+
+button{
     background: linear-gradient(to right, #0000ff -8%, #00ffff 100%);
     font-size: 15px;
     padding: 10px;
@@ -107,3 +118,38 @@ ion-select {
 .apply-label {
     font-size: 30px !important;
 }
+
+
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 360px) 
+and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .user_card {
+        height: 290%;
+        margin: auto;
+        margin-bottom: 5%;
+        margin-top: 25%;
+    }
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE MotoG4----------- */
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .user_card {
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        top: 8%;
+        height: 165%;
+    }
+}
+
