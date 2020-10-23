@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../user-service.service';
 import { newRegister } from '../../data/app-data';
-
+// import Swal from 'sweetalert2';
 
 
 @Component({
@@ -21,7 +21,8 @@ export class RegisterPage implements OnInit {
       Selfie: string;
       Picture: string;
       NBI: string;
-    
+      JobTitle: string;
+
       registerdata: newRegister;
       
       registerdataArray: newRegister[] = [];
@@ -41,7 +42,6 @@ constructor(private http: UserServiceService) {
 
   onSubmit() {
   
-
     this.registerdata ={
       id: this.tempID,
       Fullname:this.Fullname,
@@ -53,7 +53,8 @@ constructor(private http: UserServiceService) {
       Birthdate:this.Birthdate,
       Selfie: this.Selfie,
       Picture: this.Picture,
-      NBI: this.NBI
+      NBI: this.NBI,
+      JobTitle: this.JobTitle
     }
 
   this.registerdataArray.push(this.registerdata)
@@ -71,6 +72,7 @@ constructor(private http: UserServiceService) {
    this.Selfie =  "";
    this.Picture = "";
    this.NBI = "";
+   this.JobTitle = "";
 
   
   }

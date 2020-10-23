@@ -1,21 +1,18 @@
-<ion-content>
+<ion-content class="background">
 
     <body>
-        <div>
-            <center>
-                <div class="head">
-                    <img class="headPic" src="assets/images/Conference.png" alt="">
-                </div>
-                <div>
-                    <img class="logo" src="assets/images/logo.png">
-                    <h1>Ms.Q Artisans</h1>
-                    <p class="tagline">We Serve at your pleasure</p>
-
-                </div>
-            </center>
+        <div id="container">
+            <center><img alt="logo" id="header_logo" height="100" float-left src="assets/images/logo.png"><br></center>
         </div>
-        <div class="below">
-            <img [routerLink]="['/login']" class="imgLogin" src="assets/images/login.png" alt="">
+        <div id="container1">
+            <strong><h1>Ms.Q Associates</h1></strong>
+            <p>We serve at your pleasure</p>
+        </div>
+        <div id="container2">
+            <span class="divider line one-line"></span>
+            <center>
+                <ion-spinner *ngIf="show" class="loader"></ion-spinner>
+            </center>
         </div>
     </body>
 
