@@ -7,7 +7,7 @@
                 <div class="d-flex justify-content-center">
                     <div class="brand_logo_container">
 
-                        <img src="assets/images/signIn.PNG" class="brand_logo" alt="Logo">
+                        <img src="assets/images/signIn.png" class="brand_logo" alt="Logo">
                     </div>
                 </div>
                 <div class="d-flex justify-content-center form_container">
@@ -19,12 +19,12 @@
                             <input class="form-control input_user" name="uname" [(ngModel)]="Username" type="text" required minlength="4"
                             placeholder="Username" #uname="ngModel" >
                             <div class="input-group mb-1">
-                                <div class="alert alert-danger" id="err" *ngIf="uname.invalid && (uname.dirty || uname.touched)">
+                                <div class="text-danger" id="err" *ngIf="uname.invalid && (uname.dirty || uname.touched)">
                                     <div *ngIf="uname.errors.required">
-                                        * Please provide your username.
+                                         Please provide your username.
                                     </div>
                                     <div *ngIf="uname.errors.minlength" class="err">
-                                        * Username must be at least 4 characters.
+                                         Username must be at least 4 characters.
                                     </div>
                                 </div>
                             </div>                        </div>
@@ -34,11 +34,12 @@
                             </div>
                             <input type="password" [(ngModel)]="Password" name="password" placeholder="Password" class="form-control" required #password="ngModel" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
                             <div class="input-group mb-1">
-                                <div class="alert alert-danger" id="err" *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+                                <div class="text-danger" id="err" *ngIf="password.invalid && (password.dirty || password.touched)" >
                                     <div *ngIf="password.errors.required"> Password is required. </div>
                                     <div *ngIf="password.errors.pattern"> Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters.</div>
                                 </div>
-                            </div>                        </div>
+                            </div>                        
+                        </div>
                         <div class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="customControlInline">
@@ -46,7 +47,7 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-center mt-3 ">
-                            <button class="logbtn btn-outline-primary" [disabled]="!sampleForm.form.valid" [routerLink]="['/job-orders']">Login</button>
+                            <button class="logbtn btn-outline-primary" [disabled]="!sampleForm.form.valid" [routerLink]="['/job-orders']">Sing In</button>
                         </div>
                     </form>
                 </div>

@@ -5,58 +5,54 @@ ion-content {
     
 }
 
-
-ion-footer{
+    
+.user_card {
+    margin: auto;
+    height:160%;
+    width: 350px;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    background: white;
     position: relative;
-    top: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px 50px 0px 116px;
+    opacity: 0.5;
 }
-    
-    .user_card {
-        height:auto;
-        width: auto;
-        margin-top: 35%;
-        margin-bottom: auto;
-        background: white;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 10px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 15px 50px 0px 116px;
-        opacity: 0.5;
-    }
-    
-    .user_card:hover {
-        opacity: 5.0;
-    }
 
-   
-    .brand_logo_container {
-        position: $absolute;
-        height: 170px;
-        width: 170px;
-        top: -75px;
-        border-radius: 50%;
-        background: rgb(21, 160, 224);
-        padding: 10px;
-        text-align: $center;
-        box-shadow: 0px 1px 10px rgb(91, 110, 119);
+.user_card:hover {
+    opacity: 5.0;
+}
 
-    }
-    
-    .brand_logo {
-        height: 150px;
-        width: 150px;
-        border-radius: 50%;
-        border: 2px $solid $light;
-    }
-    
-    .form_container {
-        margin-top: 100px;
-    }
+
+.brand_logo_container {
+    position: $absolute;
+    height: 170px;
+    width: 170px;
+    top: -75px;
+    border-radius: 50%;
+    background: rgb(21, 160, 224);
+    padding: 10px;
+    text-align: $center;
+    box-shadow: 0px 1px 10px rgb(91, 110, 119);
+
+}
+
+.brand_logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px $solid $light;
+}
+
+.form_container {
+    margin-top: 100px;
+}
  
 .input-group-text {
     background: rgb(59, 133, 230);
@@ -75,6 +71,18 @@ ion-footer{
 .input_user,
 .input_pass {
     border-radius: 20px;
+}
+
+.regbtn {
+    background: linear-gradient(to right, #0000ff -8%, #00ffff 100%);
+    font-size: 15px;
+    padding: 10px;
+    width: 76%;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px black;
 }
 
 button{
@@ -108,3 +116,38 @@ input[type=radio]:checked {
 ion-select{
     width: 300px;
 }
+
+
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 360px) 
+and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .user_card {
+        height: 290%;
+        margin: auto;
+        margin-bottom: 5%;
+        margin-top: 25%;
+    }
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE MotoG4----------- */
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .user_card {
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        top: 8%;
+        height: 165%;
+    }
+}
+
