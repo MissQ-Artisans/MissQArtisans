@@ -1,4 +1,31 @@
 ion-title {
-    color: skyblue;
+    color: white;
     letter-spacing: 1.5px;
+}
+
+.menu-items {
+    margin: 0px;
+    ion-icon {
+        margin-right: 20px;
+        color: black;
+        position: absolute;
+        font-size: 30px;
+    }
+    ion-item {
+        padding-left: 0px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        // background-color: $info;
+    }
+    ion-label {
+        margin-left: 53px;
+    }
+}
+
+ion-item.item:hover div {
+    background-color: skyblue !important;
+    color: white;
+    width: 100%;
+    padding: 10px;
 }

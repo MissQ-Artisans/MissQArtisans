@@ -9,7 +9,7 @@ export class newRegister{
     Birthdate:Date;
     Selfie: string;
     Picture: string;
-    NBI: String;
+    NBI: string;
 }
 
 export class newLogin{

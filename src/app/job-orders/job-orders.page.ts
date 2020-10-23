@@ -17,7 +17,7 @@ export class JobOrdersPage implements OnInit {
   async order() {
     const modal = await this.modalController.create({
       component: OrdersPage,
-      componentProps: { name: 'Jessa Mae Yosores', title: 'Tutor', sched: 'On or Before Agust 24', location: "Sa Amua", rate: "75%" },
+      componentProps: { name: 'Jessa Mae Yosores', title: 'Massage', sched: 'On or Before Agust 24', location: "Sa Amua", rate: "75%" },
       cssClass: 'setting-modal',
       backdropDismiss: false,
     });

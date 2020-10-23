@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="primary">
         <ion-title>Settings</ion-title>
         <ion-buttons slot="start">
             <ion-menu-button menu="main-menu"></ion-menu-button>
@@ -71,19 +71,19 @@ https://edupala.com/ionic-menu-with-example/
                     <ion-icon name="notifications" slot="start"></ion-icon>
                     <ion-label>Notification Settings</ion-label>
                 </ion-item>
-                <ion-item menuclose [hidden]="!isSetting" [routerLink]="['/tracker']" [queryParams]="{ type: 'birthday' }">
+                <ion-item menuclose [hidden]="!isSetting" [routerLink]="['/tracker']" [queryParams]="{ type: 'newOrder' }">
                     <ion-icon name="md-basket" slot="start"></ion-icon>
                     <ion-label> New order notifications</ion-label>
                 </ion-item>
-                <ion-item menuclose [hidden]="!isSetting" [routerLink]="['/']" [queryParams]="{ type: 'birthday' }" menuClose class="sub-menu">
+                <ion-item menuclose [hidden]="!isSetting" [routerLink]="['/']" [queryParams]="{ type: 'language' }" menuClose class="sub-menu">
                     <ion-icon name="globe" slot="start"></ion-icon>
                     <ion-label>Language</ion-label>
                 </ion-item>
-                <ion-item menuclose [hidden]="!isSetting" [routerLink]="['/']" [queryParams]="{ type: 'birthday' }" menuClose class="sub-menu">
+                <ion-item menuclose [hidden]="!isSetting" [routerLink]="['/']" [queryParams]="{ type: 'region' }" menuClose class="sub-menu">
                     <ion-icon name="md-globe" slot="start"></ion-icon>
                     <ion-label>Region / State</ion-label>
                 </ion-item>
-                <ion-item menuclose [hidden]="!isSetting" [routerLink]="['/']" [queryParams]="{ type: 'birthday' }" menuClose class="sub-menu">
+                <ion-item menuclose [hidden]="!isSetting" [routerLink]="['/']" [queryParams]="{ type: 'share' }" menuClose class="sub-menu">
                     <ion-icon name="md-share-alt" slot="start"></ion-icon>
                     <ion-label>Share</ion-label>
                 </ion-item>
